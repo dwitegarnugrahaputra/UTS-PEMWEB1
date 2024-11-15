@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK Negeri 3 Tegal</title>
+    <link rel="stylesheet" href="halaman_about.html">
+    <link rel="stylesheet" href="content.html">
+    <style>
+        /* CSS Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #003366;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header img {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            height: 50px;
+        }
+
+        /* Bagian Latar Belakang */
+        .background-section {
+            background-image: url('https://smkn3tegal.sch.id/wp-content/uploads/2022/08/IMG_8526-1-scaled.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            color: #fff;
+            text-align: center;
+        }
+
+        .background-overlay {
+            background-color: rgba(0, 51, 102, 0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .background-content {
+            position: relative;
+            z-index: 2;
+            padding-top: 20%;
+        }
+
+        .background-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .background-section p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* Navigasi di atas latar belakang */
+        .background-nav {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 3;
+        }
+
+        .background-nav a {
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.1em;
+            background-color: rgba(0, 85, 170, 0.7);
+            border-radius: 5px;
+        }
+
+        .background-nav a:hover {
+            background-color: #003366;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Bagian Sambutan dan Profil Kepala Sekolah */
+        .welcome-section {
+            padding: 40px 20px;
+            background-color: #f8f9fa;
+            display: flex;
+            gap: 20px;
+        }
+
+        .welcome-section .text-content {
+            width: 60%;
+        }
+
+        .welcome-section .text-content h2 {
+            font-size: 2em;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        .welcome-section .text-content p {
+            font-size: 1.1em;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Bagian profil kepala sekolah */
+        .principal-profile {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .principal-profile img {
+            width: 100px;
+            height: 125px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .principal-profile .profile-text p:first-child {
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        .principal-profile .profile-text p:last-child {
+            font-size: 0.8em;
+            font-weight: normal;
+        }
+
+        /* Styling Tabel Visi dan Misi */
+        .vision-mission {
+            width: 40%;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .vision-mission h3 {
+            font-size: 1.5em;
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        .vision-mission p {
+            font-size: 1em;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #003366;
+            color: #fff;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 1.2em;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Logo Footer di kiri */
+        footer .footer-logo {
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        /* Kontak Info di kanan */
+        footer .contact-info {
+            text-align: left;
+            font-size: 0.7em;
+        }
+
+        footer .contact-info p {
+            margin: 2px 0;
+        }
+
+        footer .contact-info a {
+            font-size: 0.7em;
+        }
+
+        footer .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Bagian Header -->
+    <header>
+        <h1>SMK Negeri 3 Tegal</h1>
+        <p>Unggul, Mandiri, dan Berbudaya.</p>
+        <img src="https://smkn3tegal.sch.id/wp-content/uploads/2024/02/smkn3tegal-removebg-preview.png"
+            alt="Logo SMK 3 Tegal">
+    </header>
+
+    <!-- Bagian Latar Belakang dengan Navigasi dan Slogan -->
+    <div class="background-section">
+        <div class="background-overlay"></div>
+
+        <!-- Tautan Navigasi di atas latar belakang -->
+        <nav class="background-nav">
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="content.html" onclick="showPage('content')">Content</a>
+            <a href="halaman_about.html" onclick="showPage('about')">About</a>
+
+        </nav>
+
+        <div class="background-content">
+            <h2>Unggul, Mandiri, dan Berbudaya</h2>
+            <p>SMK 3 Tegal menjunjung tinggi nilai etika, sopan, dan santun serta bertekad menjadikan siswa-siswa kami
+                unggul dalam berbagai bidang dan profesi.</p>
+        </div>
+    </div>
+
+    <!-- Bagian Sambutan dan Profil Kepala Sekolah -->
+    <div class="welcome-section">
+        <!-- Bagian Sambutan -->
+        <div class="text-content">
+            <h2>Selamat Datang di SMK Negeri 3 Kota Tegal</h2>
+            <p>
+                Puji syukur kami panjatkan ke hadapan Allah SWT, karena atas limpahan bimbingan-Nya SMKN 3 TEGAL hadir
+                di tengah kita semua. Kami sadar website kami masih jauh dari sempurna, hal itu dikarenakan kami semua
+                masih dalam taraf belajar dan terus belajar. Melalui website ini, kami ingin memberikan pelayanan
+                informasi khususnya tentang pendidikan di SMK kami.
+            </p>
+            <p>
+                Sebagai lembaga pendidikan, kami juga berharap kepada pemerhati pendidikan dan khususnya kepada
+                alumni-alumni SMKN 3 TEGAL yang saat ini sudah mahir atau sedang belajar tentang TI dimanapun anda saat
+                ini, baik masih belajar, ataupun sudah bekerja dalam dunia TI agar sudi kiranya mengirimkan berbagai
+                masukan dan sumbangsih untuk kemajuan sekolah, khususnya bidang TI.
+            </p>
+            <!-- Profil Kepala Sekolah -->
+            <div class="principal-profile">
+                <img src="https://smkn3tegal.sch.id/wp-content/uploads/2022/07/IZZA6944-scaled.jpg" alt="Kepala Sekolah"
+                    onerror="this.onerror=null;this.src='images/backup-kepala-sekolah.png';">
+                <div class="profile-text">
+                    <p>Sri Indrawati, M.Pd</p>
+                    <p>Kepala Sekolah</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visi dan Misi -->
+        <div class="vision-mission">
+            <h3>Visi dan Misi</h3>
+            <p><strong>Visi:</strong> SMKN 3 Tegal memiliki visi kuat untuk menjadi lembaga pendidikan vokasional
+                unggul. Visi tersebut mengarah pada tujuan utama: menghasilkan lulusan yang kompeten, inovatif, dan
+                memiliki daya saing tinggi di sektor teknologi, industri, dan bisnis. Untuk mewujudkan visi tersebut,
+                SMKN 3 Tegal menetapkan misi yang komprehensif.</p>
+            <p><strong>Misi:</strong> Misi kami adalah memberikan pendidikan berkualitas tinggi sesuai standar nasional
+                pendidikan vokasional. Hal ini dilakukan dengan menyelenggarakan proses pembelajaran yang efektif dan
+                relevan, guna menciptakan lulusan yang memiliki keterampilan dan pengetahuan yang sesuai dengan tuntutan
+                dunia industri. Selain itu, SMKN 3 Tegal berkomitmen untuk mengembangkan kompetensi siswa melalui
+                program ekstrakurikuler, pelatihan praktis, dan pembinaan karakter.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <img class="footer-logo"
+            src="https://smkn3tegal.sch.id/wp-content/uploads/2024/02/smkn3tegal-removebg-preview.png"
+            alt="Logo SMK 3 Tegal">
+        <div class="contact-info">
+            <p>SMK Negeri 3 Tegal</p>
+            <p>Jl. Taman Makam Pahlawan No.5, Tegal</p>
+            <p><a href="mailto:info@smkn3tegal.sch.id">info@smkn3tegal.sch.id</a></p>
+            <p><a href="tel:+62283653211">Tel: (0283) 653211</a></p>
+        </div>
+    </footer>
+<script src="js.js"></script>
+</body>
+
+</html>
